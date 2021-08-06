@@ -1,0 +1,10 @@
+{
+    "include": ["./src/*"], 
+    "exclude": ["./node_module"],
+    "compilerOptions": {
+        "module": "ES2015",
+        "target": "ES2015",
+        "strict": true,
+        "experimentalDecorators": true
+    }
+}
