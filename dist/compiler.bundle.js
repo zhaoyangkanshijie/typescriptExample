@@ -10,13 +10,13 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/decorator.ts":
-/*!**************************!*\
-  !*** ./src/decorator.ts ***!
-  \**************************/
-/***/ (function() {
+/***/ "./src/compiler.ts":
+/*!*************************!*\
+  !*** ./src/compiler.ts ***!
+  \*************************/
+/***/ (() => {
 
-eval("\r\nvar __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {\r\n    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;\r\n    if (typeof Reflect === \"object\" && typeof Reflect.decorate === \"function\") r = Reflect.decorate(decorators, target, key, desc);\r\n    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;\r\n    return c > 3 && r && Object.defineProperty(target, key, r), r;\r\n};\r\nfunction f() {\r\n    console.log(\"f(): evaluated\");\r\n    return function (target, propertyKey, descriptor) {\r\n        console.log(\"f(): called\");\r\n    };\r\n}\r\nfunction g() {\r\n    console.log(\"g(): evaluated\");\r\n    return function (target, propertyKey, descriptor) {\r\n        console.log(\"g(): called\");\r\n    };\r\n}\r\nclass C {\r\n    method() { }\r\n}\r\n__decorate([\r\n    f(),\r\n    g()\r\n], C.prototype, \"method\", null);\r\n// f(): evaluated\r\n// g(): evaluated\r\n// g(): called\r\n// f(): called\r\nlet Greeter = class Greeter {\r\n    constructor(message) {\r\n        this.greeting = message;\r\n    }\r\n    greet() {\r\n        return \"Hello, \" + this.greeting;\r\n    }\r\n};\r\nGreeter = __decorate([\r\n    sealed\r\n], Greeter);\r\nfunction sealed(constructor) {\r\n    Object.seal(constructor);\r\n    Object.seal(constructor.prototype);\r\n}\r\nfunction classDecorator(constructor) {\r\n    return class extends constructor {\r\n        constructor() {\r\n            super(...arguments);\r\n            this.newProperty = \"new property\";\r\n            this.hello = \"override\";\r\n        }\r\n    };\r\n}\r\nlet Greeter2 = class Greeter2 {\r\n    constructor(m) {\r\n        this.property = \"property\";\r\n        this.hello = m;\r\n    }\r\n};\r\nGreeter2 = __decorate([\r\n    classDecorator\r\n], Greeter2);\r\nconsole.log(new Greeter(\"world\"));\r\nclass Greeter3 {\r\n    constructor(message) {\r\n        this.greeting = message;\r\n    }\r\n    greet() {\r\n        return \"Hello, \" + this.greeting;\r\n    }\r\n}\r\n__decorate([\r\n    enumerable(false)\r\n], Greeter3.prototype, \"greet\", null);\r\nfunction enumerable(value) {\r\n    return function (target, propertyKey, descriptor) {\r\n        descriptor.enumerable = value;\r\n    };\r\n}\r\nclass Point2 {\r\n    constructor(x, y) {\r\n        this._x = x;\r\n        this._y = y;\r\n    }\r\n    get x() { return this._x; }\r\n    get y() { return this._y; }\r\n}\r\n__decorate([\r\n    configurable(false)\r\n], Point2.prototype, \"x\", null);\r\n__decorate([\r\n    configurable(false)\r\n], Point2.prototype, \"y\", null);\r\nfunction configurable(value) {\r\n    return function (target, propertyKey, descriptor) {\r\n        descriptor.configurable = value;\r\n    };\r\n}\r\n\n\n//# sourceURL=webpack://typescriptExample/./src/decorator.ts?");
+eval("\r\n\n\n//# sourceURL=webpack://typescriptExample/./src/compiler.ts?");
 
 /***/ })
 
@@ -76,7 +76,7 @@ eval("\r\nvar __decorate = (this && this.__decorate) || function (decorators, ta
 /******/ 	
 /******/ 	/* webpack/runtime/get update manifest filename */
 /******/ 	(() => {
-/******/ 		__webpack_require__.hmrF = () => ("decorator." + __webpack_require__.h() + ".hot-update.json");
+/******/ 		__webpack_require__.hmrF = () => ("compiler." + __webpack_require__.h() + ".hot-update.json");
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
@@ -550,7 +550,7 @@ eval("\r\nvar __decorate = (this && this.__decorate) || function (decorators, ta
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"decorator": 0
+/******/ 			"compiler": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -1060,7 +1060,7 @@ eval("\r\nvar __decorate = (this && this.__decorate) || function (decorators, ta
 /******/ 	// module cache are used so entry inlining is disabled
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/decorator.ts");
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/compiler.ts");
 /******/ 	
 /******/ })()
 ;
